@@ -10,9 +10,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class TestController {
 
-    @GetMapping("/hello")
+    @GetMapping("/")
     @ResponseBody
-    public String printHello() {
-        return "Hello from " + System.getenv("HOSTNAME");
+    public String greet() {
+        return "Greetings Earthlings! </br> You have reached the planet : <b>" + System.getenv("HOSTNAME") + "</b>";
     }
 }
